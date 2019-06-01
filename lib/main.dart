@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(84,180,149,1),
+        backgroundColor: Color.fromRGBO(24,68,51,1),
 
         body: Center(
 
@@ -38,10 +38,10 @@ class _MyAppState extends State<MyApp> {
 
               Container(
                 child: Image.asset(
-                'assets/images/raillogoactual.png',
-                scale: 3,
-                height: 300,
-                width: 250,
+                'assets/images/RailDrishtilogo.png',
+
+                height:100,
+               width: 350,
           ),
         height: 550,
         ),
@@ -50,10 +50,10 @@ class _MyAppState extends State<MyApp> {
               Container(
 
               child: Text(
-            "eDRISHTI",
+            "RailDrishti",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 30,fontWeight:FontWeight.bold,color: Color.fromRGBO(84,180,149,1)),
-              ),decoration: BoxDecoration(color: Color.fromRGBO(255,255,255,1)),
+            style: TextStyle(fontSize: 35,fontWeight:FontWeight.bold,color: Color.fromRGBO(255,255,255,1),fontFamily:),
+              ),
                 width: double.infinity,
                 height:60,
               ),

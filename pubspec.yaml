@@ -36,7 +36,8 @@ dev_dependencies:
 flutter:
    assets:
      - assets/images/raillogoactual.png
-     - images/a_dot_ham.jpeg
+     - assets/images/RailDrishtilogo.png
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
