@@ -29,37 +29,29 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(24,68,51,1),
-
+        backgroundColor: Color.fromRGBO(24, 68, 51, 1),
         body: Center(
-
-            child: Column(
-                children: [
-
-              Container(
-                child: Image.asset(
-                'assets/images/RailDrishtilogo.png',
-
-                height:100,
-               width: 350,
-                ),
-        height: 550,
-              ),
-
-
-              Container(
-
-              child: Text(
-            "RailDrishti",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 35,fontWeight:FontWeight.bold,color: Color.fromRGBO(255,255,255,1)),
-              ),
-                width: double.infinity,
-                height:60,
-              ),
-                ]
-            )
-        )
-    );
+            child: Column(children: [
+          Container(
+            child: Image.asset(
+              'assets/images/RailDrishtilogo.png',
+              height: 100,
+              width: 350,
+            ),
+            height: 550,
+          ),
+          Container(
+            child: Text(
+              "RailDrishti",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromRGBO(255, 255, 255, 1)),
+            ),
+            width: double.infinity,
+            height: 60,
+          ),
+        ])));
   }
 }
