@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget{
-
+class HomePage extends StatefulWidget {
   @override
-  Widget build(BuildContext context){
+  _HomePageState createState() => _HomePageState();
+}
 
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-
-      body:Center(
-
-        child:Text("Home")
-
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(24,68,51,1),
+        title: Text('RailDrishti'),
 
       ),
 
     );
-
-
   }
-
 }

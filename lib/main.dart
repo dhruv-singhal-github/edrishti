@@ -42,9 +42,9 @@ class _MyAppState extends State<MyApp> {
 
                 height:100,
                width: 350,
-          ),
+                ),
         height: 550,
-        ),
+              ),
 
 
               Container(
@@ -52,12 +52,14 @@ class _MyAppState extends State<MyApp> {
               child: Text(
             "RailDrishti",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 35,fontWeight:FontWeight.bold,color: Color.fromRGBO(255,255,255,1),fontFamily:),
+            style: TextStyle(fontSize: 35,fontWeight:FontWeight.bold,color: Color.fromRGBO(255,255,255,1)),
               ),
                 width: double.infinity,
                 height:60,
               ),
-
-    ])));
+                ]
+            )
+        )
+    );
   }
 }
