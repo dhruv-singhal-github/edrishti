@@ -5,7 +5,7 @@ class IconElement extends StatelessWidget {
   final Widget _midElement;
   final Widget _bottomElement;
 
-  IconElement(this._topElement, this._midElement, this._bottomElement);
+  IconElement( this._topElement,this._midElement, this._bottomElement);
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +13,14 @@ class IconElement extends StatelessWidget {
       child: Center(
         child: Column(
           children: <Widget>[
+        Column(
+        children: <Widget>[
             (_topElement == null) ? Container() : _topElement,
-            _midElement,
-            _bottomElement,
-          ],
+        _midElement,
+        _bottomElement,
+        ],
+
+        )],
           mainAxisAlignment: MainAxisAlignment.center,
         ),
       ),
@@ -46,6 +50,7 @@ class IconElementGroup extends StatelessWidget {
                   fontSize: 16,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.bold,
+                  color: Colors.blueGrey,
                 ),
               ),
               alignment: Alignment.topLeft,

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import "HomePage.dart";
 
 void main() => runApp(MaterialApp(
+
       home: MyApp(),
+      debugShowCheckedModeBanner: false,
     ));
 
 class MyApp extends StatefulWidget {
@@ -15,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     Future.delayed(
-      Duration(seconds: 7),
+      Duration(seconds: 4),
       () {
         Navigator.push(
             context,
@@ -29,7 +31,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(24, 68, 51, 1),
+        backgroundColor:Colors.teal[800],
         body: Center(
             child: Column(children: [
           Container(
