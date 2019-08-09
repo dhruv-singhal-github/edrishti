@@ -1022,7 +1022,7 @@ class _HomePageState extends State<HomePage> {
             .grey[180], //TODO: Move background color to material App properties
         child: ListView(
           scrollDirection: Axis.vertical,
-          children: <Widget>[
+          children: <Widget>[carousel(),
             IconElementGroup(iconList1,'Reserved Class'),
             IconElementGroup(iconList3,'Services'),
             IconElementGroup(iconList5, 'Unreserved Class'),
@@ -1080,9 +1080,9 @@ class carousel extends StatelessWidget {
   var carousl = Container(
     height: 200,//padding: EdgeInsets.fromLTRB(10,0, 10, 0),
     child: Carousel(
-     /* images: [
 
-       /* NetworkImage(
+      images: [
+        NetworkImage(
             'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_01.jpg'),
         NetworkImage(
             'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_02.jpg'),
@@ -1130,21 +1130,8 @@ class carousel extends StatelessWidget {
         NetworkImage(
             'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_23.jpg'),
         NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_24.jpg'),*/
-        /*Image.network("https://images.unsplash.com/photo-1503875154399-95d2b151e3b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-          width:70.0,
-          height:50.0,
-          fit: BoxFit.cover,),
-        Image.network("https://images.unsplash.com/photo-1515875294982-4796669a7932?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-          width:70.0,
-          height:50.0,
-          fit: BoxFit.cover,),*/
+            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_24.jpg'),
 
-      ],*/
-      images: [
-        NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-        NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
-        ExactAssetImage("assets/images/user.jpg")
       ],
 
       showIndicator: false,
