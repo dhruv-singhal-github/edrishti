@@ -23,7 +23,8 @@ import 'Unreserved/Tickets_un.dart';
 import 'Unreserved/passengers_ur.dart';
 import 'dashboard_ui.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-
+import 'maps_ui.dart';
+import 'links_ui.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -1038,42 +1039,61 @@ class _HomePageState extends State<HomePage> {
       ),
       alignment: Alignment.topCenter,
     );
-  }
 
+  }
   @override
   Widget build(BuildContext context) {
+    return openPage(_createMainPage());
+
+  }
+  Widget openPage(Widget child){
+    int _currentIndex=0;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Colors.teal[800],
+        backgroundColor: Color.fromRGBO(24, 68, 51, 1),
         title: Text('RailDrishti'),
       ),
       body: _createMainPage(),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.grey,
+
+        shape: CircularNotchedRectangle(),
+        notchMargin:4.0,
+        color: Colors.teal,
         child: Row(
+          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Icon(
-              Icons.home,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.business,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.train,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.link,
-              color: Colors.white,
-            ),
+            IconButton(icon: Icon(Icons.home),onPressed: (){
+
+            },),
+            IconButton(icon:Icon(Icons.location_city),onPressed: () {
+              Navigator
+                  .of(context)
+                  .push(new MaterialPageRoute(builder: (BuildContext context) {
+                return openPage(MapLayout());
+              }),);
+            },),
+            IconButton(icon:Icon(Icons.train),onPressed: () {
+              Navigator
+                  .of(context)
+                  .push(new MaterialPageRoute(builder: (BuildContext context) {
+                return openPage(MapLayout());
+              }),);
+            },),
+            IconButton(icon:Icon(Icons.launch),onPressed: () {
+              Navigator
+                  .of(context)
+                  .push(new MaterialPageRoute(builder: (BuildContext context) {
+                return openPage(LinkScreen());
+              }),);
+            },)
           ],
         ),
       ),
     );
   }
+
+
 }
 
 class carousel extends StatelessWidget {
