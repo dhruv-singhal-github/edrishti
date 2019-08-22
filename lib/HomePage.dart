@@ -1053,7 +1053,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color.fromRGBO(24, 68, 51, 1),
         title: Text('RailDrishti'),
       ),
-      body: _createMainPage(),
+      body: child,
       bottomNavigationBar: BottomAppBar(
 
         shape: CircularNotchedRectangle(),
@@ -1064,7 +1064,11 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             IconButton(icon: Icon(Icons.home),onPressed: (){
-
+              Navigator
+                  .of(context)
+                  .push(new MaterialPageRoute(builder: (BuildContext context) {
+                return openPage(HomePage());
+              }),);
             },),
             IconButton(icon:Icon(Icons.location_city),onPressed: () {
               Navigator
@@ -1102,55 +1106,25 @@ class carousel extends StatelessWidget {
     child: Carousel(
 
       images: [
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_01.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_02.jpg'),
-
-        NetworkImage(
-          'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_03.jpg',),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_04.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_05.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_06.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_07.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_08.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_09.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_10.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_11.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_12.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_13.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_14.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_15.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_16.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_17.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_18.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_19.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_20.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_21.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_22.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_23.jpg'),
-        NetworkImage(
-            'https://www.raildrishti.in/raildrishti/img/achievements/ir/ir_24.jpg'),
+        AssetImage("assets/images/carosel1.jpg"),
+      AssetImage("assets/images/carosel2.jpg"),
+  AssetImage("assets/images/carosel3.jpg"),
+        AssetImage("assets/images/carosel4.jpg"),
+        AssetImage("assets/images/carosel5.jpg"),
+        AssetImage("assets/images/carosel6.jpg"),
+        AssetImage("assets/images/carosel7.jpg"),
+        AssetImage("assets/images/carosel8.jpg"),
+        AssetImage("assets/images/carosel10.jpg"),
+        AssetImage("assets/images/carosel11.jpg"),
+        AssetImage("assets/images/carosel12.jpg"),
+        AssetImage("assets/images/carosel13.jpg"),
+        AssetImage("assets/images/carosel14.jpg"),
+        AssetImage("assets/images/carosel15.jpg"),
+        AssetImage("assets/images/carosel16.jpg"),
+        AssetImage("assets/images/carosel17.jpg"),
+        AssetImage("assets/images/carosel18.jpg"),
+        AssetImage("assets/images/carosel19.jpg"),
+        AssetImage("assets/images/carosel20.jpg"),
 
       ],
 
